@@ -17,7 +17,7 @@
         ...
       }: {
         packages = {
-          boobbot = pkgs.buildDubPackage {
+          boobbot = pkgs.buildDubPackage rec {
             pname = "boobbot";
             version = "0.0.0";
             src = ./.;
@@ -25,6 +25,7 @@
             installPhase = ''
               runHook preInstall
               install -Dm755 boobbot -t $out/bin
+							patchelf --set-rpath ${pkgs.lib.makeLibraryPath buildInputs} $out/bin/boobbot
               runHook postInstall
             '';
             buildInputs = [pkgs.openssl];
