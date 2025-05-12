@@ -1,0 +1,3 @@
+[submodule "SimpleWordlists"]
+	path = SimpleWordlists
+	url = https://github.com/taikuukaits/SimpleWordlists/

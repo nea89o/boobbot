@@ -1,0 +1,124 @@
+{
+  "dependencies": {
+    "automem": {
+      "version": "0.6.11",
+      "sha256": "0l3cbkji47p9myhdpmm83s4j8rjvdwkyln1hinlw1kzph4dgb5wn"
+    },
+    "cachetools": {
+      "version": "0.4.2",
+      "sha256": "0l24y3pwnwxdf1zkx7nxgiscf2ycyj4a4cqhy2qn9syvmdgy6rd4"
+    },
+    "dcd": {
+      "version": "0.16.0-beta.3",
+      "sha256": "0wcsb3zjjfahkaabl4vbcml6wlh4jykdj8xcllyjnzyzf6nbysn5"
+    },
+    "dfmt": {
+      "version": "0.15.2",
+      "sha256": "18dvsikkjifa2y51zg949czklv33hgbx4cgf9iqzqfad3c4gz9d0"
+    },
+    "diet-complete": {
+      "version": "0.0.3",
+      "sha256": "1klzivhzb185m38jvmm957s38mllpa2rkkv8az8ipmwdjj8z6mpv"
+    },
+    "dscanner": {
+      "version": "0.16.0-beta.4",
+      "sha256": "19k22y9lz5mv2irciaimziqny2nss6d0xf2gm3dyj24l8kx727ms"
+    },
+    "dub": {
+      "version": "1.38.1",
+      "sha256": "1dq16qdshdm2l2785h318wyidwvc2d6sigf1sc8dvvhz93a0j4x2"
+    },
+    "emsi_containers": {
+      "version": "0.9.0",
+      "sha256": "1viz1fjh6jhfvl0d25bb1q7aclm1hrs0d7hhcx1d9c0gg5k6lcpm"
+    },
+    "fuzzymatch": {
+      "version": "1.0.0",
+      "sha256": "1avbpn4qqgkqxzg26flhhwzrz0s59xnicvxh72l0yqabaxjnawsj"
+    },
+    "inifiled": {
+      "version": "1.3.3",
+      "sha256": "01hw0lb9n6vwmx6vj5nq2awg54l5pvngqhzxfj2kmg99az84dg6d"
+    },
+    "isfreedesktop": {
+      "version": "0.1.1",
+      "sha256": "0bnjr9avvhl7s09dnbcdr5437yb18jj26fzvm7j292kvd2i8kzqz"
+    },
+    "jsonizer": {
+      "version": "0.7.7",
+      "sha256": "1pz86ff0h6bn3iv0dbc1ps02n7wa3qji7f7xqa2vssw68wn8y4vl"
+    },
+    "libddoc": {
+      "version": "0.8.0",
+      "sha256": "0vxhkd92rxrkrz0svapdnkzh1bdqhws6wakhjj7szmkvykjgwksc"
+    },
+    "libdparse": {
+      "version": "0.23.2",
+      "sha256": "0bcaasam3iiqisilyx4ysxahjmgifn7i8ny155nwg64bjjibd8dk"
+    },
+    "mir-algorithm": {
+      "version": "3.22.3",
+      "sha256": "0z4zdac9jhdlkb67m8jny006pw0j05sbvn21qsiibk5sazf1dzrp"
+    },
+    "mir-core": {
+      "version": "1.7.1",
+      "sha256": "15m1n48fcmh5pw3w4ww5qfzwkdglflpzc3xmxmrlvd30swyyr85j"
+    },
+    "mir-cpuid": {
+      "version": "1.2.11",
+      "sha256": "1gxrnvvy34cfi71p8a0s904z3zp1l7k9qvliacxmhvykxr1nhrsf"
+    },
+    "mir-ion": {
+      "version": "2.3.3",
+      "sha256": "1fvl0gd627i4r9fvaz2pl5g5bqgf538vbnk31mc5xacmln54cwps"
+    },
+    "msgpack-d": {
+      "version": "1.0.5",
+      "sha256": "1gndqjs17pkgmqvwra9wbvvmvlr1kaj443j3x7xl6jb320hk9dbn"
+    },
+    "requests": {
+      "version": "2.1.3",
+      "sha256": "0j7jz1n5g21cj6kw389raj60hpq7rkak17y84ny7yqv2i3pqwvc5"
+    },
+    "rm-rf": {
+      "version": "0.1.0",
+      "sha256": "0yr2jan7m49y0c6vm8nblvmgqqzw1c19g5m3cb412wwa37k12v5d"
+    },
+    "sdlfmt": {
+      "version": "0.1.1",
+      "sha256": "1qmyy5wn3bgd2q5dhy9wyjry2i3mdnaaml8ggvsz4yn23jrs0kr9"
+    },
+    "sdlite": {
+      "version": "1.1.2",
+      "sha256": "0c7ryphvlnb7330gj0h6xv1rmi8f3jfbkqx8jy02a11yc6syizxz"
+    },
+    "serve-d": {
+      "version": "0.8.0-beta.18",
+      "sha256": "0in059xn7pr8fq5x44wxs0iaab1s2wwgxjxjp399vl4csi2z7kc1"
+    },
+    "silly": {
+      "version": "1.1.1",
+      "sha256": "0fz7ib715sfk3w69i6xns5pwd4caahvfqjf32v13daxm1ms8xdzz"
+    },
+    "standardpaths": {
+      "version": "0.8.2",
+      "sha256": "00xjysxlr9rg1wczvijx1bqnq5vb8iiy3jxhh4m10d7814srvlh0"
+    },
+    "taggedalgebraic": {
+      "version": "0.11.23",
+      "sha256": "1bialmbdwjpqhgs95inkwzin7xbhx7sngjf7viq90vzma497l59k"
+    },
+    "test_allocator": {
+      "version": "0.3.4",
+      "sha256": "1xpjz6smxwgm4walrv3xbzi46cddc80q5n4gs7j9gm2yx11sf7gj"
+    },
+    "unit-threaded": {
+      "version": "2.2.3",
+      "sha256": "070qlnr33miyg6w6q8yvry8nnxng23vdklvbr94dmjrbplxb9fy8"
+    },
+    "xdgpaths": {
+      "version": "0.2.5",
+      "sha256": "09l3bkcldv7ckh3d2cmivvj3cbql96a24g3khlz7zp9f1aabfykl"
+    }
+  }
+}

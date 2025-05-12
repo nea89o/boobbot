@@ -1,0 +1,8 @@
+name "boobbot"
+description "Backronym orderly orginating bot"
+authors "Linnea Gräf"
+copyright "Copyright © 2025, Linnea Gräf"
+license "proprietary"
+dependency "requests" version="~>2.1.3"
+dependency "jsonizer" version="~>0.7.7"
+
