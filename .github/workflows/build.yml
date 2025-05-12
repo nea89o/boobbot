@@ -1,0 +1,62 @@
+name: Run Build
+on:
+    - push
+    - pull_request
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout source
+                uses: actions/checkout@v4.1.1
+            -   uses: dlang-community/setup-dlang@v2
+                with:
+                  compiler: dmd
+            -   run: |
+                    ./create-deploy.sh
+                    cd dist
+                    zip -r ../dist.zip *
+            -   name: Upload ZIP
+                uses: actions/upload-artifact@v4.3.0
+                with:
+                    name: dist-zip
+                    path: dist.zip
+    release:
+        runs-on: ubuntu-latest
+        needs: build
+        permissions: write-all
+        if: ${{ 'push' == github.event_name && 'master' == github.ref_name }}
+        concurrency:
+            cancel-in-progress: true
+            group: nightly-release
+        steps:
+            -   name: Set repository context
+                uses: actions/checkout@v4
+            -   name: Download artifact
+                uses: actions/download-artifact@v4
+                with:
+                    name: dist-zip
+            -   name: Update release
+                run: |
+                    echo Generating notes
+                    (
+                        echo "Automatically generated nightly release. This release is updated on each new commit"
+                        echo
+                        echo Generated from commit: \`$(git rev-parse HEAD)\`
+                    )> release-notes.md
+                    cat release-notes.md
+                    echo Deleting all existing nightly assets
+                    gh release view nightly --json assets \
+                    | jq '.assets[]|.name' -r \
+                    | while IFS= read -r name;
+                    do
+                        gh release delete-asset -y -- nightly "$name";
+                    done
+                    echo Pushing current commit to nightly ref
+                    git tag -f nightly
+                    git push -f origin nightly
+                    echo Upload release
+                    gh release upload nightly -- "$(echo *.zip)"
+                    gh release edit nightly -F release-notes.md
+                env:
+                    GH_TOKEN: ${{ github.token }}

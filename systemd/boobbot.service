@@ -6,8 +6,8 @@ Wants=boobjob.timer
 
 [Service]
 Type=oneshot
-ExecStart=$SOURCE/boobbot
-EnvironmentFile=$SOURCE/.env
+ExecStart=SOURCE/bin/boobbot
+EnvironmentFile=SOURCE/rt/.env
 
 [Install]
 WantedBy=multi-user.target

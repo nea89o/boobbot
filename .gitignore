@@ -15,4 +15,4 @@ boobbot-test-*
 *.obj
 *.lst
 .env
-
+dist
