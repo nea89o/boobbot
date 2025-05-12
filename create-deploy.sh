@@ -12,11 +12,16 @@ cat >dist/install.sh <<"EOF"
 cd "$(dirname -- "$0")"
 root="$PWD"
 echo "Switched to $root"
-(
-	cd systemd
+(cd systemd
 	for f in *; do
 		sed -e "s|SOURCE|$root|g" < "$f" > "/etc/systemd/system/$f"
 	done
+)
+(cd rt
+	if ! [[ -d "$root"/rt/SimpleWordlists ]]; then
+		curl -L https://github.com/taikuukaits/SimpleWordlists/archive/master.tar.gz | tar -xzf-
+		mv SimpleWordlists{-master,}
+	fi
 )
 )
 
