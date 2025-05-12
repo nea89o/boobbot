@@ -1,0 +1,13 @@
+# Service to load and execute the boobbot timer
+
+[Unit]
+Description=Posts a boob joke to fedi
+Wants=boobjob.timer
+
+[Service]
+Type=oneshot
+ExecStart=$SOURCE/boobbot
+EnvironmentFile=$SOURCE/.env
+
+[Install]
+WantedBy=multi-user.target

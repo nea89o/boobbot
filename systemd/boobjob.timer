@@ -1,0 +1,11 @@
+# Timer for posting a boob joke once a day
+[Unit]
+Description=Posts a boob joke
+Requires=boobbot.service
+
+[Timer]
+Unit=boobbot.service
+OnCalendar=daily
+
+[Install]
+WantedBy=timers.target

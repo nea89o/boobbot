@@ -14,5 +14,6 @@ void main()
 	);
 
 	auto boobFormat = "boob is short for\n\n" ~ generator.formatBackronymList("boob");
-	writefln("%s", misskey.createNote(new BasicNote("public", boobFormat)));
+	writefln("-- dry --\n%s", boobFormat);
+//	writefln("%s", misskey.createNote(new BasicNote("public", boobFormat)));
 }
